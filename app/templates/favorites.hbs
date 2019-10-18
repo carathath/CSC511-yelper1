@@ -1,0 +1,9 @@
+<h2>Favorites</h2>
+{{#each model as |favorites|}}
+<LinkTo @route="specific" @model={{favorites.yelpid}}>
+    <h4 class="link">{{favorites.name}}</h4>
+</LinkTo>
+{{else}}
+<h3>No favorites yet</h3>
+{{/each}}
+{{outlet}}

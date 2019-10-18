@@ -1,0 +1,68 @@
+input{
+    border-radius: 5px;
+}
+
+button{
+    border-radius: 5px;
+    background-color: darkblue;
+    color: aliceblue;
+    font-weight: bold;
+    height: 40px;
+}
+
+h1{
+    color: aliceblue;
+}
+
+a{
+    color: aliceblue;
+    text-decoration: none;
+    display: inline;
+}
+
+ul{
+    margin-bottom: 2px;
+}
+
+.nav-item{
+    display: inline-block;
+}
+
+.link{
+    color: darkslategray;
+    text-decoration: none;
+}
+
+.link:hover{
+    text-decoration: none;
+    color: darkslategray;
+}
+
+.navbar{
+    background-color: darkslategray;
+}
+
+.jumbotron{
+    background-image: url("/assets/walk1.jpg");
+    background-size: cover;
+}
+
+.lead{
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.d1{
+    border: solid;
+    border-color: red;
+}
+
+.d2{
+    border: dotted;
+    border-color: blue;
+}
+
+#map{
+    height: 400px;
+    width: 100px;
+}

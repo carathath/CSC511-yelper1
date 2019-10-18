@@ -1,0 +1,26 @@
+  query business($id: String!){
+  business(id: $id) {
+    name
+    price
+    rating
+    review_count
+    display_phone
+    hours{
+      open{
+        start
+        end
+        day
+      }
+    }
+    location{
+      address1
+      formatted_address
+    }
+    coordinates{
+      latitude
+      longitude
+    }
+    url
+    alias
+  }
+  }

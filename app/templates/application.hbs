@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <a class="navbar-brand" href="/">
+    <img src="/assets/y.jpg" width="30" height="30" class="d-inline-block align-top" alt="logo">
+    Yelper
+  </a>
+
+  <ul class="navbar mr-auto inline">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="specific">About</a>
+      </li>
+      <li class="nav-item">
+        {{#if session.isAuthenticated}}
+        Logged in as {{ session.data.authenticated.user.displayName }}
+        <button {{action "logout"}}>Sign out</button>
+        {{else}}
+        <button {{action "login"}}>Sign in with Google</button>
+        {{/if}}
+      </li>
+      <LinkTo @route="favorites"><li class="nav-item">Favorites</li></LinkTo>
+  </ul>
+</nav>
+
+{{outlet}}

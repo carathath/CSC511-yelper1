@@ -1,0 +1,16 @@
+   query search($term: String!, $loc: String!) {
+    search(term: $term,
+            location: $loc,
+            limit: 5) {
+        total
+        business {
+            name
+            rating
+            price
+            id
+            location{
+            address1
+            }
+        }
+    }
+}
