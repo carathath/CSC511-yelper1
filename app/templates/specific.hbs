@@ -1,10 +1,16 @@
 <h2>{{model.business.name}}</h2>
-<button {{action "save"}}>Save</button>
+
+{{#if model.favorites}}
+ <button {{action 'unsave'}}>Unsave</button>
+{{else}}
+ <button {{action "save"}}>Save</button>
+{{/if}}
+
 <h4>Rating: {{model.business.rating}}</h4>
 <h4>Price: {{model.business.price}}</h4>
 <h2>Contact: {{model.business.display_phone}}</h2>
 <p>{{model.business.location.formatted_address}}</p>
 <p>{{model.business.coordinates.longitude}}</p>
 
-<a href={{model.url}} target="_blank"><button>Visit Site</button></a>
+<a href={{model.business.url}} target="_blank"><button>Visit Site</button></a>
 <br>

@@ -8,9 +8,12 @@ export default Controller.extend({
                 name: this.get('model.business.name'),
                 yelpid: this.get('model.business.id')
             });
-            newFavorite.save();
+            newFavorite.save().then(()=> {
+                this.set('model.favorites', newFavorite)
+            });
         },
         unsave() {
+            alert('Removed from favorites');
             this.get('model.favorites')
             .destroyRecord()
             .then(() => {

@@ -1,6 +1,6 @@
 <h2>Favorites</h2>
 {{#each model as |favorites|}}
-<LinkTo @route="specific" @model={{favorites.yelpid}}>
+<LinkTo @route='specific' @model={{favorites.yelpid}}>
     <h4 class="link">{{favorites.name}}</h4>
 </LinkTo>
 {{else}}

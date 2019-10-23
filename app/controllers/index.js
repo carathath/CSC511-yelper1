@@ -10,11 +10,11 @@ export default Controller.extend({
       throttle(() => {
         this.set('term');
       }, 1000);
-    }/*
+    },
     updateLoc() {
       throttle(() => {
         this.set('loc');
       }, 1000);
-    }*/
+    }
   }
 });
