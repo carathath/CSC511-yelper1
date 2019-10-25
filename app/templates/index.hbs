@@ -1,28 +1,33 @@
 <div class="jumbotron">
   <h1>YELPER</h1>
-  <p class="lead">Your one stop site for your necessities</p>
+  <p class="lead">The one stop site for your necessities</p>
   <div class="input-group">
    <div class="input-group-prepend">
      <span class="input-group-text">Search for: </span>
    </div>
     <Input @type="text" @id="term" @placeholder="burger, pizza" @value={{term}} />
     <Input @type="text" @id="loc" @placeholder="City or State" @value={{location}} /> <!--value={{loc}}-->
+    <Input @type="text" @id="price" @placeholder="1=$,..., 4=$$$$" @value={{price}} />
   </div>
 </div>
 
-<div class="row d-flex justify-content-center">
-    <div class="col-md-5 col-sm-10 d1 m-md-1">
-        <ul>
+<div class="row d-flex justify-content-center mb-5">
+    <div class="col-md-5 col-sm-10 m-md-1">
         {{#each model.business as |business|}}
         <LinkTo @route="specific" @model={{business.id}}>
-        <li class="link">{{business.name}}, {{business.rating}}, <br>{{business.location.address1}}</li>
+          <h4 class="link result">{{business.name}} ⭐️{{business.rating}}</h4>
         </LinkTo>
+        <span class="address">{{business.location.address1}}</span> <b>{{business.price}}</b>
+        <hr>
         {{/each}}
-        </ul>
+
     </div>
 
-    <div class="col-md-3 col-sm-10 d2 m-md-1">
-        <p>Social Media aca</p>
+    <div class="col-md-1 col-sm-10 m-md-1">
+        <a href="https://www.facebook.com/carathath/" target="_blank" class="fa fa-facebook"></a>
+        <a href="https://www.instagram.com/carathath/" target="_blank" class="fa fa-instagram"></a>
+        <a href="https://www.linkedin.com/in/luis-c-302501118/" target="_blank" class="fa fa-linkedin"></a>
+        <a href="https://github.com/carathath/" target="_blank"><img src="/assets/GitHub-Mark-64px.png"></a>
     </div>
 </div>
 

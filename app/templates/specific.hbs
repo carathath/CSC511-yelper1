@@ -1,16 +1,23 @@
+<div class="row d-flex justify-content-center">
+<div class="col-md-5 centerino">
 <h2>{{model.business.name}}</h2>
 
 {{#if model.favorites}}
- <button {{action 'unsave'}}>Unsave</button>
+ <button {{action "unsave"}}>Unsave</button>
 {{else}}
  <button {{action "save"}}>Save</button>
 {{/if}}
-<!---->
-<h4>Rating: {{model.business.rating}}</h4>
+
+<h4>⭐️{{model.business.rating}}</h4>
 <h4>Price: {{model.business.price}}</h4>
 <h2>Contact: {{model.business.display_phone}}</h2>
-<p>{{model.business.location.formatted_address}}</p>
-<p>{{model.business.coordinates.longitude}}</p>
+<p class="address">{{model.business.location.formatted_address}}</p>
 
-<a href={{model.business.url}} target="_blank"><button>Visit Site</button></a>
-<br>
+{{#g-map lat=model.business.coordinates.latitude lng=model.business.coordinates.longitude zoom=20 as |g|}}
+{{g.marker lat=model.business.coordinates.latitude lng=model.business.coordinates.longitude}}
+{{/g-map}}
+
+<a href={{model.business.url}} target="_blank"><button class="mb-5">Visit Site</button></a>
+
+</div>
+</div>

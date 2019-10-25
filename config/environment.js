@@ -1,10 +1,9 @@
 'use strict';
-
+// import {KEYS} from 'config/custom-config'
 module.exports = function(environment) {
   let ENV = {
-
     firebase: {
-      apiKey: "AIzaSyAycMl25FtJZvgqVNxYjILHVK-bIu2VUvU",
+      apiKey: 'AIzaSyAycMl25FtJZvgqVNxYjILHVK-bIu2VUvU', //FIREBASE_API_KEY
       authDomain: "yelpapp-8278e.firebaseapp.com",
       databaseURL: "https://yelpapp-8278e.firebaseio.com",
       projectId: "yelpapp-8278e",
@@ -58,6 +57,18 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
+  }
+
+  ENV['ember-google-maps'] = {
+    key: "AIzaSyCpsXxGWfM0w8jvYR7vxq8OFsEcv6DxHU0", //GMAP_API_KEY
+    language: 'en',
+    region: 'US',
+    protocol: 'https',
+    version: '3.35',
+    libraries: ['geometry', 'places'], // Optional libraries
+    // client: undefined,
+    // channel: undefined,
+    // baseUrl: '//maps.googleapis.com/maps/api/js'
   }
 
   return ENV;

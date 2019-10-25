@@ -7,6 +7,7 @@ export default Controller.extend({
             const newFavorite = this.store.createRecord('favorites',{
                 name: this.get('model.business.name'),
                 yelpid: this.get('model.business.id')
+                
             });
             newFavorite.save().then(()=> {
                 this.set('model.favorites', newFavorite)

@@ -2,9 +2,11 @@
   business(id: $id) {
     name
     price
+    id
     rating
     review_count
     display_phone
+    photos
     hours{
       open{
         start

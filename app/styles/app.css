@@ -11,17 +11,35 @@ button{
 }
 
 h1{
-    color: aliceblue;
+    color: white;
+    font-family: 'Lobster', cursive;
 }
 
 a{
     color: aliceblue;
     text-decoration: none;
+    font-weight: bold;
     display: inline;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
 }
 
 ul{
     margin-bottom: 2px;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: darkslategray;
+    color: white;
+    text-align: center;
+    z-index: 100;
 }
 
 .nav-item{
@@ -48,21 +66,78 @@ ul{
 }
 
 .lead{
-    color: aliceblue;
+    color: white;
+    font-family: 'Staatliches', cursive;
+}
+
+.result{
+    color: darkslategray;
+    text-decoration: none;
+    font-family: 'Acme', sans-serif;
+}
+
+.result:hover{
+    text-decoration: underline;
+    color: darkslategray;
+}
+
+.address{
+    color: white;
     font-weight: bold;
+    border-style: solid;
+    border-color: black;
+    border-radius: 4px;
+    background-color: darkgreen;
+    padding: 4px;
+    margin: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip; 
 }
 
-.d1{
-    border: solid;
-    border-color: red;
+.fa {
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    width: 70px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 5px;
 }
 
-.d2{
-    border: dotted;
-    border-color: blue;
+.fa:hover {
+opacity: 0.7;
 }
 
-#map{
-    height: 400px;
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.centerino{
+    text-align: center;
+    margin-top: 5px;
+}
+
+.foto{
     width: 100px;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.ember-google-map {
+    width: 500px;
+    height: 500px;
+  }
